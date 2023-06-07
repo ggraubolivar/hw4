@@ -15,15 +15,12 @@
     </div>
     <div>
       <a href="/">Home</a>
-      <%= @current_user["user_id"] %>
       <a href="/logout">Logout</a>
-      <a href="/login">Login</a>
-      <a href="/users/new">Signup</a>
     </div>
 
 <p>
   <% if @current_user %>
-    <%= @current_user["user_id"] %>
+    <%= @current_user["username"] %>
   <% else %>
     <a href="/sessions/new">Login</a> |
     <a href="/users/new">Signup</a>
